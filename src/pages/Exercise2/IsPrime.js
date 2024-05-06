@@ -1,8 +1,12 @@
 import { checkIfPrime } from './helpers';
+import { useMemo } from 'react';
 
 export const IsPrime = (props) => {
+
   const { number, showExplainer } = props;
-  const isPrime = checkIfPrime(number);
+  const isPrime = useMemo(() => {
+    checkIfPrime(number);
+  }, [number]);
 
   return (
     <div>
@@ -18,4 +22,5 @@ export const IsPrime = (props) => {
       )}
     </div>
   );
+
 };
