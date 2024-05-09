@@ -5,6 +5,7 @@ import { GraphPoint } from './GraphPoint';
 import './styles.css';
 
 export const Exercise3 = () => {
+
   const [showExplainer, setShowExplainer] = useState(false);
 
   return (
